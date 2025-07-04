@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqggevhmjvn0h"]
+
+[ext_resource type="Script" uid="uid://bafocw0cv4th2" path="res://Scripts/apple.gd" id="1_ir1en"]
+[ext_resource type="Texture2D" uid="uid://b3828qnl5p1yi" path="res://Assets/apple.png" id="1_v3gsn"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ir1en"]
+
+[node name="Apple" type="Area2D" groups=["Food"]]
+script = ExtResource("1_ir1en")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(16, 16)
+shape = SubResource("CircleShape2D_ir1en")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(16, 16)
+texture = ExtResource("1_v3gsn")

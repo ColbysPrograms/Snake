@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://1i6pshotldet"]
+
+[ext_resource type="Script" uid="uid://di4sngnxq6wsj" path="res://Scripts/quit_button.gd" id="1_f2m5b"]
+
+[node name="QuitButton" type="Button"]
+custom_minimum_size = Vector2(150, 0)
+offset_right = 8.0
+offset_bottom = 8.0
+text = "Quit"
+script = ExtResource("1_f2m5b")
+
+[connection signal="pressed" from="." to="." method="_on_pressed"]

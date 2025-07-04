@@ -1,0 +1,40 @@
+[gd_scene load_steps=2 format=3 uid="uid://s1g14u63jhi2"]
+
+[ext_resource type="Script" uid="uid://t54aqb3u4tn3" path="res://Scenes/hud.gd" id="1_e0onf"]
+
+[node name="HUD" type="CanvasLayer"]
+script = ExtResource("1_e0onf")
+
+[node name="Panel" type="Panel" parent="."]
+custom_minimum_size = Vector2(0, 32)
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+alignment = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 10
+
+[node name="ScoreLabel" type="Label" parent="Panel/HBoxContainer/MarginContainer"]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Score: 0"
+
+[node name="MarginContainer2" type="MarginContainer" parent="Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/margin_top = 2
+theme_override_constants/margin_right = 10
+
+[node name="HighScoreLabel" type="Label" parent="Panel/HBoxContainer/MarginContainer2"]
+unique_name_in_owner = true
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 1, 0, 1)
+text = "High Score: 0"
